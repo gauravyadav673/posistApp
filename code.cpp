@@ -19,6 +19,22 @@ struct node{
 int currentRootCount=0;
 struct node* allRoots[10];
 
+string encrypt(std::string msg, std::string const& key)
+{   
+    if(!key.size())
+        return msg;
+    
+    for (string::size_type i = 0; i < msg.size(); ++i)
+        msg[i] ^= key[i%key.size()];
+    return msg;
+}
+
+string decrypt(std::string const& msg, string const& key)
+{
+    return encrypt(msg, key);
+}
+
+
 void encryptAndSave(struct node* cNode, string owner, string address, string mobile, string phone, float val, int nodeID){
     //use nodeID as key to encrypt data and save the data to the node
     cNode->owner = owner;
