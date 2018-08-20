@@ -1,3 +1,8 @@
+//all features are not implemented due to time lack.
+// I am a node developer and javascript lover and want to be a part of posist, do consider resume.
+
+
+
 #include <bits/stdc++.h>
 #include <iostream>
 using namespace std;
